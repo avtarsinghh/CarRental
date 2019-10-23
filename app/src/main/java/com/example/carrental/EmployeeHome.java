@@ -5,29 +5,29 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
 
 import java.util.ArrayList;
 
 public class EmployeeHome extends AppCompatActivity {
 
-    ArrayList<String> arrayList2;
+    ArrayList<String> arrayList;
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee_home);
-        recyclerView = findViewById(R.id.clientRecyclerView);
+        recyclerView = findViewById(R.id.employeeRecyclerView);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        ArrayList<Object> arrayList = new ArrayList<>();
+        arrayList.add("Add new Customer");
         arrayList.add("View all customers");
         arrayList.add("View list of vehicles");
         arrayList.add("View Reservations");
+        arrayList.add("Add new Vehicle");
 
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(this, arrayList2);
+        ClientHomeRecyclerViewAdapter recyclerViewAdapter = new ClientHomeRecyclerViewAdapter(this, arrayList);
         recyclerView.setAdapter(recyclerViewAdapter);
     }
 }

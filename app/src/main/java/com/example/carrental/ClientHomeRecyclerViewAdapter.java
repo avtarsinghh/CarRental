@@ -11,11 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
+public class ClientHomeRecyclerViewAdapter extends RecyclerView.Adapter<ClientHomeRecyclerViewAdapter.ViewHolder> {
     ArrayList<String> arrayList;
     Context context;
     LayoutInflater layoutInflater;
-    public RecyclerViewAdapter(Context context, ArrayList<String> arrayList){
+    public ClientHomeRecyclerViewAdapter(Context context, ArrayList<String> arrayList){
         this.context = context;
         this.arrayList = arrayList;
         layoutInflater = LayoutInflater.from(context);

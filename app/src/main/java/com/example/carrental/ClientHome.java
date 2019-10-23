@@ -27,7 +27,7 @@ public class ClientHome extends AppCompatActivity {
         arrayList.add("Rent vehicle now");
         arrayList.add("View Reservations");
 
-        RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(this, arrayList);
+        ClientHomeRecyclerViewAdapter recyclerViewAdapter = new ClientHomeRecyclerViewAdapter(this, arrayList);
         recyclerView.setAdapter(recyclerViewAdapter);
     }
 }
