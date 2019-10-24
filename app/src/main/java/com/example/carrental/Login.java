@@ -44,6 +44,9 @@ public class Login extends AppCompatActivity {
                             startActivity(intent);
                         }
                     }
+                    else {
+                        Toast.makeText(Login.this, "Invalid User Credentials", Toast.LENGTH_LONG).show();
+                    }
                 }
                 else{
                     Toast.makeText(Login.this, "Invalid User Credentials", Toast.LENGTH_LONG).show();

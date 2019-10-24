@@ -28,7 +28,7 @@ public class UserRepository {
         users.remove(userName);
     }
 
-    public void modifyUser(User user){
-        users.put(user.userName.toLowerCase(), user);
+    public User getUser(String userName){
+        return users.get(userName);
     }
 }

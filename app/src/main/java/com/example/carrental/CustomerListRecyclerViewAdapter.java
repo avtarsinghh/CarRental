@@ -1,6 +1,7 @@
 package com.example.carrental;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +56,11 @@ public class CustomerListRecyclerViewAdapter extends RecyclerView.Adapter<Custom
         holder.btnModify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                String userName = holder.tvUserName.getText().toString().toLowerCase();
+                Intent intent = new Intent(context, ModifyCustomer.class);
+                intent.putExtra("username", userName);
+                context.startActivity(intent);
+                notifyDataSetChanged();
             }
         });
     }
