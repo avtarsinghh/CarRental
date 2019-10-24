@@ -28,7 +28,8 @@ public class EmployeeHome extends AppCompatActivity {
         arrayList.add("View Reservations");
         arrayList.add("Add new Vehicle");
 
-        ClientHomeRecyclerViewAdapter recyclerViewAdapter = new ClientHomeRecyclerViewAdapter(this, arrayList);
+        EmployeeHomeRecyclerViewAdapter recyclerViewAdapter = new EmployeeHomeRecyclerViewAdapter(this, arrayList);
         recyclerView.setAdapter(recyclerViewAdapter);
+
     }
 }

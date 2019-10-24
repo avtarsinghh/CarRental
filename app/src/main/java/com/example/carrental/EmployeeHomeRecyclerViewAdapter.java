@@ -1,6 +1,7 @@
 package com.example.carrental;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,8 +30,33 @@ public class EmployeeHomeRecyclerViewAdapter extends RecyclerView.Adapter<Employ
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.textView.setText(arrayList.get(position));
+        holder.textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(position == 0){
+                    Intent intent = new Intent(context, AddCustomer.class);
+                    context.startActivity(intent);
+                }
+                if(position == 1){
+                    Intent intent = new Intent(context, ViewCustomers.class);
+                    context.startActivity(intent);
+                }
+                if(position == 2){
+                    Intent intent = new Intent(context, ViewVehicles.class);
+                    context.startActivity(intent);
+                }
+                if(position == 3){
+                    Intent intent = new Intent(context, ViewReservations.class);
+                    context.startActivity(intent);
+                }
+                if(position == 4){
+                    Intent intent = new Intent(context, AddVehicle.class);
+                    context.startActivity(intent);
+                }
+            }
+        });
     }
 
     @Override

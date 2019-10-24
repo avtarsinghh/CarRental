@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class CarsDetail extends AppCompatActivity {
+public class AddCustomer extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cars_detail);
+        setContentView(R.layout.activity_add_customer);
     }
 }
