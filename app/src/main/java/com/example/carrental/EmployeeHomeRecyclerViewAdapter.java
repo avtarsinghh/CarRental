@@ -44,15 +44,15 @@ public class EmployeeHomeRecyclerViewAdapter extends RecyclerView.Adapter<Employ
                     context.startActivity(intent);
                 }
                 if(position == 2){
-                    Intent intent = new Intent(context, ViewVehicles.class);
+                    Intent intent = new Intent(context, AddVehicle.class);
                     context.startActivity(intent);
                 }
                 if(position == 3){
-                    Intent intent = new Intent(context, ViewReservations.class);
+                    Intent intent = new Intent(context, ViewVehicles.class);
                     context.startActivity(intent);
                 }
                 if(position == 4){
-                    Intent intent = new Intent(context, AddVehicle.class);
+                    Intent intent = new Intent(context, ViewReservations.class);
                     context.startActivity(intent);
                 }
             }

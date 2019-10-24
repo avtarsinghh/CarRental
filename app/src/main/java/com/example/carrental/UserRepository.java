@@ -23,4 +23,12 @@ public class UserRepository {
     public Map<String, User> getUsers() {
         return this.users;
     }
+
+    public void deleteUser(String userName){
+        users.remove(userName);
+    }
+
+    public void modifyUser(User user){
+        users.put(user.userName.toLowerCase(), user);
+    }
 }

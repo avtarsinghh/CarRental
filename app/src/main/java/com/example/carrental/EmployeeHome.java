@@ -24,9 +24,10 @@ public class EmployeeHome extends AppCompatActivity {
         arrayList = new ArrayList<>();
         arrayList.add("Add new Customer");
         arrayList.add("View all customers");
+        arrayList.add("Add new Vehicle");
         arrayList.add("View Vehicles");
         arrayList.add("View Reservations");
-        arrayList.add("Add new Vehicle");
+
 
         EmployeeHomeRecyclerViewAdapter recyclerViewAdapter = new EmployeeHomeRecyclerViewAdapter(this, arrayList);
         recyclerView.setAdapter(recyclerViewAdapter);
