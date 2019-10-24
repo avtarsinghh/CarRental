@@ -1,11 +1,13 @@
 package com.example.carrental;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class UserRepository {
     private static UserRepository instance = null;
-    private List<User> users = new ArrayList<>();
+    private Map<String, User> users = new HashMap<>();
 
     public static UserRepository getInstance() {
         if (instance == null) {
@@ -15,10 +17,10 @@ public class UserRepository {
     }
 
     public void addUser(User user) {
-        this.users.add(user);
+        this.users.put(user.userName, user);
     }
 
-    public List<User> getUsers() {
+    public Map<String, User> getUsers() {
         return this.users;
     }
 }

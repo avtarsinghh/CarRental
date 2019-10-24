@@ -32,7 +32,23 @@ public class Login extends AppCompatActivity {
                 String password  =passwordET.getText().toString();
                 int i = 0;
                 boolean userFind = false;
-                while (i < userRepository.getUsers().size()){
+                if(userRepository.getUsers().containsKey(uName)){
+                    User user = userRepository.getUsers().get(uName);
+                    if(user.password.equals(password)){
+                        if(user.role.equalsIgnoreCase("Employee")){
+                            Intent intent = new Intent(Login.this, EmployeeHome.class);
+                            startActivity(intent);
+                        }
+                        else if(user.role.equalsIgnoreCase("Client")){
+                            Intent intent = new Intent(Login.this, ClientHome.class);
+                            startActivity(intent);
+                        }
+                    }
+                }
+                else{
+                    Toast.makeText(Login.this, "Invalid User Credentials", Toast.LENGTH_LONG).show();
+                }
+                /*while (i < userRepository.getUsers().size()){
                     User user = userRepository.getUsers().get(i);
                     if(user.userName.equalsIgnoreCase(uName)){
                         if(user.password.equals(password)){
@@ -52,7 +68,7 @@ public class Login extends AppCompatActivity {
 
                 if(userFind == false){
                     Toast.makeText(Login.this, "Invalid User Credentials", Toast.LENGTH_LONG).show();
-                }
+                }*/
             }
         });
     }
