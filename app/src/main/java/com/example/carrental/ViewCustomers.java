@@ -17,7 +17,7 @@ public class ViewCustomers extends AppCompatActivity {
         setContentView(R.layout.activity_view_customer);
         recyclerView = findViewById(R.id.rvCustomerList);
         userRepository = UserRepository.getInstance();
-        customerListRecyclerViewAdapter = new CustomerListRecyclerViewAdapter(this, userRepository.getUsers());
+        customerListRecyclerViewAdapter = new CustomerListRecyclerViewAdapter(this, userRepository.getCustomers());
         recyclerView.setAdapter(customerListRecyclerViewAdapter);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);

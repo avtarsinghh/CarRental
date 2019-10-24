@@ -31,4 +31,15 @@ public class UserRepository {
     public User getUser(String userName){
         return users.get(userName);
     }
+
+    public Map<String, User> getCustomers(){
+        Map<String, User> userCustomer = new HashMap<>();
+        ArrayList<String> userNames = new ArrayList<>(instance.users.keySet());
+        for(int i = 0; i < userNames.size(); i++){
+            if(instance.users.get(userNames.get(i)).role.equalsIgnoreCase("client")){
+                userCustomer.put(userNames.get(i), instance.users.get(userNames.get(i)));
+            }
+        }
+        return userCustomer;
+    }
 }
