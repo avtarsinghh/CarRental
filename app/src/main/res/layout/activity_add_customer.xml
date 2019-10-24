@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddCustomer">
+    tools:context=".AddCustomer"
+    android:layout_margin="10dp">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Customer's"
+        android:text="Add Customer's"
         android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -20,16 +22,63 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCustomerList"
+    <EditText
+        android:id="@+id/addCustomerFirstName"
         android:layout_width="match_parent"
-        android:layout_height="652dp"
-        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.018" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <EditText
+        android:id="@+id/addCustomerLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCustomerFirstName"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <EditText
+        android:id="@+id/addCustomerUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="UserName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCustomerLastName"
+        app:layout_constraintVertical_bias="0.054" />
+
+    <EditText
+        android:id="@+id/addCustomerPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCustomerUserName"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <Button
+        android:id="@+id/btnAddCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCustomerPassword"
+        app:layout_constraintVertical_bias="0.216" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
