@@ -21,9 +21,10 @@ public class EmployeeHome extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
+        arrayList = new ArrayList<>();
         arrayList.add("Add new Customer");
         arrayList.add("View all customers");
-        arrayList.add("View list of vehicles");
+        arrayList.add("View Vehicles");
         arrayList.add("View Reservations");
         arrayList.add("Add new Vehicle");
 

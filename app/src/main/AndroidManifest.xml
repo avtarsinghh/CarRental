@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ClientHome"></activity>
+        <activity android:name=".EmployeeHome"></activity>
+        <activity android:name=".CarsDetail"></activity>
+
         <activity android:name=".Login" />
         <activity android:name=".MainActivity">
             <intent-filter>

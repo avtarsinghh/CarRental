@@ -14,7 +14,7 @@ public class UserRepository {
         return instance;
     }
 
-    public void addAnimal(User user) {
+    public void addUser(User user) {
         this.users.add(user);
     }
 
