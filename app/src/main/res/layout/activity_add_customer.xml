@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <EditText
-        android:id="@+id/etModelAddVehicle"
+        android:id="@+id/etModelModifyVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="First Name"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.058" />
 
     <EditText
-        android:id="@+id/spinnerTypeAddVehicle"
+        android:id="@+id/spinnerTypeModifyVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Last Name"
@@ -43,11 +43,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etModelAddVehicle"
+        app:layout_constraintTop_toBottomOf="@+id/etModelModifyVehicle"
         app:layout_constraintVertical_bias="0.046" />
 
     <EditText
-        android:id="@+id/etYearAddVehicle"
+        android:id="@+id/etYearModifyVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="UserName"
@@ -55,11 +55,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerTypeAddVehicle"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTypeModifyVehicle"
         app:layout_constraintVertical_bias="0.054" />
 
     <EditText
-        android:id="@+id/etColorAddVehicle"
+        android:id="@+id/etColorModifyVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
@@ -68,7 +68,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etYearAddVehicle"
+        app:layout_constraintTop_toBottomOf="@+id/etYearModifyVehicle"
         app:layout_constraintVertical_bias="0.08" />
 
     <Button
@@ -79,7 +79,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etColorAddVehicle"
+        app:layout_constraintTop_toBottomOf="@+id/etColorModifyVehicle"
         app:layout_constraintVertical_bias="0.216" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

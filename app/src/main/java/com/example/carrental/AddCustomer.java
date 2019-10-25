@@ -16,10 +16,10 @@ public class AddCustomer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_customer);
-        etFirstName = findViewById(R.id.etModelAddVehicle);
-        etLastName = findViewById(R.id.spinnerTypeAddVehicle);
-        etUserName = findViewById(R.id.etYearAddVehicle);
-        etPassword = findViewById(R.id.etColorAddVehicle);
+        etFirstName = findViewById(R.id.etModelModifyVehicle);
+        etLastName = findViewById(R.id.spinnerTypeModifyVehicle);
+        etUserName = findViewById(R.id.etYearModifyVehicle);
+        etPassword = findViewById(R.id.etColorModifyVehicle);
 
         addCustomer = findViewById(R.id.btnAddCustomer);
         userRepository = UserRepository.getInstance();

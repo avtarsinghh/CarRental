@@ -19,13 +19,13 @@ public class AddVehicle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_vehicle);
-        brandSpinner = findViewById(R.id.spinnerBrandAddVehicle);
-        typeSpinner = findViewById(R.id.spinnerTypeAddVehicle);
-        etColor = findViewById(R.id.etColorAddVehicle);
-        etModel = findViewById(R.id.etModelAddVehicle);
-        etYear = findViewById(R.id.etYearAddVehicle);
-        etLicencePlate = findViewById(R.id.etPlateNumberAddVehicle);
-        addVehicle = findViewById(R.id.btnAddVehicle);
+        brandSpinner = findViewById(R.id.spinnerBrandModifyVehicle);
+        typeSpinner = findViewById(R.id.spinnerTypeModifyVehicle);
+        etColor = findViewById(R.id.etColorModifyVehicle);
+        etModel = findViewById(R.id.etModelModifyVehicle);
+        etYear = findViewById(R.id.etYearModifyVehicle);
+        etLicencePlate = findViewById(R.id.etPlateNumberModifyVehicle);
+        addVehicle = findViewById(R.id.btnModifyVehicle);
 
         setTypes();
         setBrands();

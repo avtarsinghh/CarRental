@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <Spinner
-        android:id="@+id/spinnerBrandAddVehicle"
+        android:id="@+id/spinnerBrandModifyVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,7 +31,7 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <EditText
-        android:id="@+id/etModelAddVehicle"
+        android:id="@+id/etModelModifyVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Model"
@@ -39,22 +39,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerBrandAddVehicle"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerBrandModifyVehicle"
         app:layout_constraintVertical_bias="0.052" />
 
     <Spinner
-        android:id="@+id/spinnerTypeAddVehicle"
+        android:id="@+id/spinnerTypeModifyVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etModelAddVehicle"
+        app:layout_constraintTop_toBottomOf="@+id/etModelModifyVehicle"
         app:layout_constraintVertical_bias="0.046" />
 
     <EditText
-        android:id="@+id/etYearAddVehicle"
+        android:id="@+id/etYearModifyVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Year"
@@ -63,11 +63,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerTypeAddVehicle"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTypeModifyVehicle"
         app:layout_constraintVertical_bias="0.054" />
 
     <EditText
-        android:id="@+id/etColorAddVehicle"
+        android:id="@+id/etColorModifyVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
@@ -76,28 +76,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etYearAddVehicle"
+        app:layout_constraintTop_toBottomOf="@+id/etYearModifyVehicle"
         app:layout_constraintVertical_bias="0.08" />
 
     <EditText
-        android:id="@+id/etPlateNumberAddVehicle"
+        android:id="@+id/etPlateNumberModifyVehicle"
         android:hint="License Plate Number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etColorAddVehicle"
+        app:layout_constraintTop_toBottomOf="@+id/etColorModifyVehicle"
         app:layout_constraintVertical_bias="0.097"
         tools:layout_editor_absoluteX="-16dp" />
 
     <Button
-        android:id="@+id/btnAddVehicle"
+        android:id="@+id/btnModifyVehicle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPlateNumberAddVehicle"
+        app:layout_constraintTop_toBottomOf="@+id/etPlateNumberModifyVehicle"
         app:layout_constraintVertical_bias="0.216" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
