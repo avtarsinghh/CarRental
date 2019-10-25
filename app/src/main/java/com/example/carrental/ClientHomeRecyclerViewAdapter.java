@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class ClientHomeRecyclerViewAdapter extends RecyclerView.Adapter<ClientHomeRecyclerViewAdapter.ViewHolder> {
     ArrayList<String> arrayList;
+    ArrayList<String>arrayList2;
     Context context;
     LayoutInflater layoutInflater;
     public ClientHomeRecyclerViewAdapter(Context context, ArrayList<String> arrayList){
