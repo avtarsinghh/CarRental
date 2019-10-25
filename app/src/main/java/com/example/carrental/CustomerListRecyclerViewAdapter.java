@@ -76,8 +76,8 @@ public class CustomerListRecyclerViewAdapter extends RecyclerView.Adapter<Custom
             super(itemView);
             tvName = itemView.findViewById(R.id.tvNameCustomerList);
             tvUserName = itemView.findViewById(R.id.tvUserNameCustomerList);
-            btnDelete = itemView.findViewById(R.id.btnDeleteCustomerList);
-            btnModify = itemView.findViewById(R.id.btnModifyCustomerList);
+            btnDelete = itemView.findViewById(R.id.btnViewDetailVehicleList);
+            btnModify = itemView.findViewById(R.id.btnReserveNowVehicleList);
         }
     }
 }
