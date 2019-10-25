@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <EditText
-        android:id="@+id/addCustomerFirstName"
+        android:id="@+id/etModelAddVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="First Name"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.058" />
 
     <EditText
-        android:id="@+id/addCustomerLastName"
+        android:id="@+id/spinnerTypeAddVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Last Name"
@@ -43,11 +43,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addCustomerFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/etModelAddVehicle"
         app:layout_constraintVertical_bias="0.046" />
 
     <EditText
-        android:id="@+id/addCustomerUserName"
+        android:id="@+id/etYearAddVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="UserName"
@@ -55,11 +55,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addCustomerLastName"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTypeAddVehicle"
         app:layout_constraintVertical_bias="0.054" />
 
     <EditText
-        android:id="@+id/addCustomerPassword"
+        android:id="@+id/etColorAddVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
@@ -68,7 +68,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addCustomerUserName"
+        app:layout_constraintTop_toBottomOf="@+id/etYearAddVehicle"
         app:layout_constraintVertical_bias="0.08" />
 
     <Button
@@ -79,7 +79,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addCustomerPassword"
+        app:layout_constraintTop_toBottomOf="@+id/etColorAddVehicle"
         app:layout_constraintVertical_bias="0.216" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

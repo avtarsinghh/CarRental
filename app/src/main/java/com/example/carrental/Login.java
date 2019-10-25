@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
 public class Login extends AppCompatActivity {
     Button login;
     EditText uNameET, passwordET;
@@ -23,7 +21,6 @@ public class Login extends AppCompatActivity {
         uNameET = findViewById(R.id.edtUserName);
         passwordET = findViewById(R.id.edtPassword);
         userRepository = UserRepository.getInstance();
-        createUsers();
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,23 +71,5 @@ public class Login extends AppCompatActivity {
                 }*/
             }
         });
-    }
-
-    private void createUsers() {
-        User user = new User();
-        user.firstName = "Avtar";
-        user.lastName = "Gill";
-        user.role = "Employee";
-        user.password = "CarRental";
-        user.userName = "avtargill";
-        userRepository.addUser(user);
-
-        User user1 = new User();
-        user1.firstName = "Amardeep";
-        user1.lastName = "Kaur";
-        user1.role = "Client";
-        user1.password = "CarRental";
-        user1.userName = "amardeepkaur";
-        userRepository.addUser(user1);
     }
 }
