@@ -6,14 +6,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-public class ViewVehicles extends AppCompatActivity {
+public class ViewVehiclesEmployee extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     VehicleRepositry vehicleRepositry;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_vehicle);
+        setContentView(R.layout.activity_view_vehicle_employee);
         recyclerView = findViewById(R.id.rvVehicleList);
 
         vehicleRepositry = VehicleRepositry.getInstance();

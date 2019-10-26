@@ -1,6 +1,7 @@
 package com.example.carrental;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,6 @@ import java.util.ArrayList;
 
 public class ClientHomeRecyclerViewAdapter extends RecyclerView.Adapter<ClientHomeRecyclerViewAdapter.ViewHolder> {
     ArrayList<String> arrayList;
-    ArrayList<String>arrayList2;
     Context context;
     LayoutInflater layoutInflater;
     public ClientHomeRecyclerViewAdapter(Context context, ArrayList<String> arrayList){
@@ -29,8 +29,25 @@ public class ClientHomeRecyclerViewAdapter extends RecyclerView.Adapter<ClientHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.textView.setText(arrayList.get(position));
+        holder.textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(position == 0){
+                    Intent intent = new Intent(context, ViewVehicleClient.class);
+                }
+                else if(position == 1){
+                    Intent intent = new Intent();
+                }
+                else if(position == 2){
+
+                }
+                else if(position == 3){
+
+                }
+            }
+        });
     }
 
     @Override

@@ -9,13 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ReserveNow"></activity>
+        <activity android:name=".ViewVehicleClient"></activity>
+        <activity android:name=".ReserveNow" />
         <activity android:name=".RentNow" />
         <activity android:name=".ModifyVehicle" />
         <activity android:name=".ModifyCustomer" />
         <activity android:name=".AddVehicle" />
         <activity android:name=".ViewReservations" />
-        <activity android:name=".ViewVehicles" />
+        <activity android:name=".ViewVehiclesEmployee" />
         <activity android:name=".ViewCustomers" />
         <activity android:name=".AddCustomer" />
         <activity android:name=".ClientHome" />
