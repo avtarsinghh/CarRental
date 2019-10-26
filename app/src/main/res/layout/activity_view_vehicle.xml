@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Vehicl's"
+        android:text="Vehicle's"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCustomerList"
+        android:id="@+id/rvVehicleList"
         android:layout_width="match_parent"
         android:layout_height="652dp"
         android:layout_margin="10dp"
