@@ -13,6 +13,7 @@ public class ModifyCustomer extends AppCompatActivity {
     EditText etFirstName, etLastName, etUserName, etPassword;
     Button btnModify;
     Intent intent;
+    String userName;
     UserRepository userRepository;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +28,8 @@ public class ModifyCustomer extends AppCompatActivity {
         userRepository = UserRepository.getInstance();
 
         intent = getIntent();
-        final String username = intent.getStringExtra("username");
-
-        User user = userRepository.getUser(username);
+        userName = intent.getStringExtra("username").toLowerCase();
+        User user = userRepository.getUser(userName.toLowerCase());
         etFirstName.setText(user.firstName);
         etLastName.setText(user.lastName);
         etUserName.setText(user.userName);
@@ -40,7 +40,7 @@ public class ModifyCustomer extends AppCompatActivity {
                 String fName, lName, uName, password;
                 fName = etFirstName.getText().toString();
                 lName = etLastName.getText().toString();
-                uName = etUserName.getText().toString();
+                uName = etUserName.getText().toString().toLowerCase();
                 password = etPassword.getText().toString();
                 if(fName.equals("") || lName.equals("") || uName.equals("") || password.equals("")){
                     Toast.makeText(ModifyCustomer.this, "Please enter all credentials!!!", Toast.LENGTH_LONG).show();
@@ -52,7 +52,7 @@ public class ModifyCustomer extends AppCompatActivity {
                     user1.userName = uName;
                     user1.password = password;
                     user1.role = "Client";
-                    userRepository.deleteUser(username);
+                    userRepository.deleteUser(userName);
                     userRepository.addUser(user1);
                     Intent intent = new Intent(ModifyCustomer.this, ViewCustomers.class);
                     startActivity(intent);

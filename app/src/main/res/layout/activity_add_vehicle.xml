@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddVehicle">
+    tools:context=".AddVehicle"
+    android:layout_margin="10dp">
 
     <TextView
         android:id="@+id/textView2"
@@ -70,7 +71,6 @@
         android:id="@+id/etColorModifyVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
         android:hint="Color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
