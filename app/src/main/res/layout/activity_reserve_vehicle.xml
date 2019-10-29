@@ -7,45 +7,54 @@
     tools:context=".ReserveVehicle">
 
 
-    <EditText
-        android:id="@+id/edtStartDateActivityReserveVehicle"
-        android:layout_width="273dp"
-        android:layout_height="64dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Select Start Date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="291dp"
+        android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218"
+        android:layout_marginTop="100sp"
+        >
 
-        />
+        <EditText
+            android:id="@+id/edtStartDateActivityReserveVehicle"
+            android:layout_width="273dp"
+            android:layout_height="64dp"
+            android:ems="10"
+            android:hint="Select Start Date"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.218"
 
-    <EditText
-        android:id="@+id/edtEndDateActivityReserveVehicle"
-        android:layout_width="265dp"
-        android:layout_height="67dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="End Date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtStartDateActivityReserveVehicle"
-        app:layout_constraintVertical_bias="0.095" />
+            />
 
-    <Button
-        android:id="@+id/btnReserveActivityReserveVehicle"
-        android:layout_width="195dp"
-        android:layout_height="76dp"
-        android:text="Reserve Vehicle"
-        android:textStyle="italic"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEndDateActivityReserveVehicle"
-        app:layout_constraintVertical_bias="0.144" />
+        <EditText
+            android:id="@+id/edtEndDateActivityReserveVehicle"
+            android:layout_width="275dp"
+            android:layout_height="66dp"
+            android:ems="10"
+            android:hint="End Date"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtStartDateActivityReserveVehicle"
+            app:layout_constraintVertical_bias="0.095" />
+
+        <Button
+            android:id="@+id/btnReserveActivityReserveVehicle"
+            android:layout_width="195dp"
+            android:layout_height="76dp"
+            android:text="Reserve Vehicle"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtEndDateActivityReserveVehicle"
+            app:layout_constraintVertical_bias="0.144" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
