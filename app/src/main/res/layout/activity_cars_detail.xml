@@ -126,5 +126,13 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btnReserve"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:textStyle="italic"
+        android:textSize="25dp"
+        android:text="Reserve" />
+
 
 </LinearLayout>
