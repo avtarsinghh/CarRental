@@ -127,12 +127,22 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnReserve"
+        android:id="@+id/btnReserveCarDetail"
         android:layout_width="match_parent"
         android:layout_height="74dp"
         android:textStyle="italic"
         android:textSize="25dp"
         android:text="Reserve" />
+    <Button
+        android:id="@+id/btnRentCarDetail"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:text=" Rent "
+        android:textSize="25dp"
+        android:textStyle="italic"
+       />
+
+
 
 
 </LinearLayout>
