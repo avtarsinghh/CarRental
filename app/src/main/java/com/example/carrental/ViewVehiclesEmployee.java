@@ -14,12 +14,12 @@ public class ViewVehiclesEmployee extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_vehicle_employee);
-        recyclerView = findViewById(R.id.rvVehicleList);
+        recyclerView = findViewById(R.id.rvVehicleListEmployee);
 
         vehicleRepositry = VehicleRepositry.getInstance();
 
-        VehicleListRecyclerViewAdapter vehicleListRecyclerViewAdapter = new VehicleListRecyclerViewAdapter(this, vehicleRepositry.getVehicles());
-        recyclerView.setAdapter(vehicleListRecyclerViewAdapter);
+        VehicleListEmployeeRecyclerViewAdapter vehicleListEmployeeRecyclerViewAdapter = new VehicleListEmployeeRecyclerViewAdapter(this, vehicleRepositry.getVehicles());
+        recyclerView.setAdapter(vehicleListEmployeeRecyclerViewAdapter);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
     }

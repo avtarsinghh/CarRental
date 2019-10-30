@@ -2,10 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#19000000"
-    android:orientation="vertical"
     android:layout_marginBottom="10dp"
-    android:id="@+id/llVListEmployee">
+    android:background="#19000000"
+    android:orientation="vertical">
 
     <View
         android:layout_width="match_parent"
@@ -21,13 +20,14 @@
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="#000" />
+
         <LinearLayout
             android:layout_width="100dp"
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/ivVehicleListClient"
                 android:layout_marginRight="5dp"
-                android:id="@+id/ivVehicleListEmployee"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </LinearLayout>
@@ -113,4 +113,28 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnViewDetailVehicleList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Detail" />
+
+        <Button
+            android:id="@+id/btnReserveNowVehicleList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reserve now" />
+
+        <Button
+            android:id="@+id/btnRentNowVehicleList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rent Now" />
+    </LinearLayout>
 </LinearLayout>

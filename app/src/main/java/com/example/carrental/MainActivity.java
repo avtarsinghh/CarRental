@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         Vehicle vehicle = new Vehicle();
         vehicle.brand = "BMW";
         vehicle.color = "black";
-        vehicle.licencePlate = "E6h 789";
+        vehicle.licencePlate = "E6h 789".toLowerCase();
         vehicle.model = "X6";
         vehicle.type = "SUV";
         vehicle.year = 2019;
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         Vehicle vehicle1 = new Vehicle();
         vehicle1.brand = "AUDI";
         vehicle1.color = "black";
-        vehicle1.licencePlate = "A22 789";
+        vehicle1.licencePlate = "A22 789".toLowerCase();
         vehicle1.model = "A8";
         vehicle1.type = "Sedan";
         vehicle1.year = 2019;

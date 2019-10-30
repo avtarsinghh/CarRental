@@ -14,13 +14,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class VehicleListRecyclerViewAdapter extends RecyclerView.Adapter<VehicleListRecyclerViewAdapter.ViewHolder> {
+public class VehicleListClientRecyclerViewAdapter extends RecyclerView.Adapter<VehicleListClientRecyclerViewAdapter.ViewHolder> {
+
     LayoutInflater layoutInflater;
     Context context;
     Map<String, Vehicle> vehicleMap;
     ArrayList<String> licenceNumbers;
 
-    public VehicleListRecyclerViewAdapter(Context context, Map<String, Vehicle> vehicleMap){
+    public VehicleListClientRecyclerViewAdapter(Context context, Map<String, Vehicle> vehicleMap){
         this.context = context;
         this.vehicleMap = vehicleMap;
         layoutInflater = LayoutInflater.from(context);

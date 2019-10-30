@@ -57,7 +57,7 @@ public class AddVehicle extends AppCompatActivity {
                     vehicle.year = Integer.parseInt(year);
                     vehicle.type = type;
                     vehicle.model = model;
-                    vehicle.licencePlate = licenceNumber;
+                    vehicle.licencePlate = licenceNumber.toLowerCase();
                     vehicle.color = color;
                     vehicle.brand = brand;
                     vehicleRepositry.addVehicle(vehicle);

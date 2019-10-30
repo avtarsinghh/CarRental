@@ -23,4 +23,8 @@ public class VehicleRepositry {
     public Map<String, Vehicle> getVehicles(){
         return vehicles;
     }
+
+    public void removeVehicle(String license){
+        instance.vehicles.remove(license.toLowerCase());
+    }
 }
