@@ -15,6 +15,7 @@ public class ModifyCustomer extends AppCompatActivity {
     Intent intent;
     String userName;
     UserRepository userRepository;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +31,12 @@ public class ModifyCustomer extends AppCompatActivity {
         intent = getIntent();
         userName = intent.getStringExtra("username").toLowerCase();
         User user = userRepository.getUser(userName.toLowerCase());
-        etFirstName.setText(user.firstName);
-        etLastName.setText(user.lastName);
-        etUserName.setText(user.userName);
+        if (user != null) {
+            etFirstName.setText(user.firstName);
+            etLastName.setText(user.lastName);
+            etUserName.setText(user.userName);
+        }
+
 
         btnModify.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,10 +46,9 @@ public class ModifyCustomer extends AppCompatActivity {
                 lName = etLastName.getText().toString();
                 uName = etUserName.getText().toString().toLowerCase();
                 password = etPassword.getText().toString();
-                if(fName.equals("") || lName.equals("") || uName.equals("") || password.equals("")){
+                if (fName.equals("") || lName.equals("") || uName.equals("") || password.equals("")) {
                     Toast.makeText(ModifyCustomer.this, "Please enter all credentials!!!", Toast.LENGTH_LONG).show();
-                }
-                else{
+                } else {
                     User user1 = new User();
                     user1.firstName = fName;
                     user1.lastName = lName;
@@ -56,6 +59,7 @@ public class ModifyCustomer extends AppCompatActivity {
                     userRepository.addUser(user1);
                     Intent intent = new Intent(ModifyCustomer.this, ViewCustomers.class);
                     startActivity(intent);
+                    ModifyCustomer.this.finish();
                 }
             }
         });

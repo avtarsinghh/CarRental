@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ModifyCustomer"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    tools:context=".ModifyCustomer">
 
     <TextView
         android:id="@+id/textView3"
@@ -25,13 +25,13 @@
         android:id="@+id/etFirstNameModifyCustomer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="First Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.091"
-        android:hint="First Name"/>
+        app:layout_constraintVertical_bias="0.091" />
 
     <EditText
         android:id="@+id/etLastNameModifyCustomer"
@@ -50,12 +50,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="UserName"
+        android:inputType="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etLastNameModifyCustomer"
-        app:layout_constraintVertical_bias="0.091" />
+        app:layout_constraintVertical_bias="0.091"
+        android:enabled="false"/>
 
     <EditText
         android:id="@+id/etPasswordModifyCustomer"
@@ -74,11 +76,11 @@
         android:id="@+id/btnModifyCustomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Modify"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPasswordModifyCustomer"
-        app:layout_constraintVertical_bias="0.284"
-        android:text="Modify"/>
+        app:layout_constraintVertical_bias="0.284" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

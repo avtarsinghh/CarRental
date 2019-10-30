@@ -13,7 +13,7 @@
         <activity android:name=".ModifyCustomer" />
         <activity android:name=".AddVehicle" />
         <activity android:name=".ViewReservations" />
-        <activity android:name=".ViewVehicles" />
+        <activity android:name=".ViewVehiclesEmployee" />
         <activity android:name=".ViewCustomers" />
         <activity android:name=".AddCustomer" />
         <activity android:name=".ClientHome" />
