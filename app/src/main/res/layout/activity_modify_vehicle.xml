@@ -70,7 +70,6 @@
         android:id="@+id/etColorModifyVehicle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
         android:hint="Color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,11 +82,13 @@
         android:id="@+id/etPlateNumberModifyVehicle"
         android:hint="License Plate Number"
         android:layout_width="match_parent"
+        android:inputType="none"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etColorModifyVehicle"
         app:layout_constraintVertical_bias="0.097"
-        tools:layout_editor_absoluteX="-16dp" />
+        tools:layout_editor_absoluteX="-16dp"
+        android:enabled="false"/>
 
     <Button
         android:id="@+id/btnModifyVehicle"

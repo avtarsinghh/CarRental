@@ -124,6 +124,7 @@ public class AddVehicle extends AppCompatActivity {
 
     public void setTypes(){
         types = new ArrayList<>();
+        types.add("Select Type");
         types.add("Hatchback");
         types.add("Sedan");
         types.add("MPV");
