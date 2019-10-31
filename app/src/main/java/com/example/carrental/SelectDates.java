@@ -14,8 +14,8 @@ import android.widget.EditText;
 
 import java.util.Calendar;
 
-public class ReserveVehicle extends AppCompatActivity
-{
+public class SelectDates extends AppCompatActivity {
+
     private EditText edtStartDate,edtEndDate;
     Button btnReserve;
     private DatePickerDialog.OnDateSetListener dateSetListener;
@@ -39,7 +39,7 @@ public class ReserveVehicle extends AppCompatActivity
                 int month=cal.get(Calendar.MONTH);
                 int day=cal.get(Calendar.DAY_OF_MONTH);
 
-                DatePickerDialog datePickerDialog=new DatePickerDialog(ReserveVehicle.this,
+                DatePickerDialog datePickerDialog=new DatePickerDialog(SelectDates.this,
                         android.R.style.Theme_Holo_Dialog_MinWidth,dateSetListener,year,month,day);
 
                 datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -69,7 +69,7 @@ public class ReserveVehicle extends AppCompatActivity
                 int month=cal.get(Calendar.MONTH);
                 int day=cal.get(Calendar.DAY_OF_MONTH);
 
-                DatePickerDialog datePickerDialog=new DatePickerDialog(ReserveVehicle.this,
+                DatePickerDialog datePickerDialog=new DatePickerDialog(SelectDates.this,
                         android.R.style.Theme_Holo_Dialog_MinWidth,dateSetListener2,year,month,day);
 
                 datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -82,9 +82,6 @@ public class ReserveVehicle extends AppCompatActivity
             public void onDateSet(DatePicker datePicker, int year, int month, int day)
             {
                 month=month+1;
-
-                Log.d(TAG, "onDateSet: mm/dd/yyyy" +month+ "/" +day+ "/" +year);
-
                 String date=month +"/" +day+ "/" +year ;
                 edtEndDate.setText(date);
             }

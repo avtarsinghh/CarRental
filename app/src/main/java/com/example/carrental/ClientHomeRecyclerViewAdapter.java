@@ -16,11 +16,13 @@ public class ClientHomeRecyclerViewAdapter extends RecyclerView.Adapter<ClientHo
     ArrayList<String> arrayList;
     Context context;
     LayoutInflater layoutInflater;
-    public ClientHomeRecyclerViewAdapter(Context context, ArrayList<String> arrayList){
+
+    public ClientHomeRecyclerViewAdapter(Context context, ArrayList<String> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
         layoutInflater = LayoutInflater.from(context);
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -34,18 +36,18 @@ public class ClientHomeRecyclerViewAdapter extends RecyclerView.Adapter<ClientHo
         holder.textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(position == 0){
-                    Intent intent = new Intent(context, ViewVehicleClient.class);
+                Intent intent = null;
+                if (position == 0) {
+                    intent = new Intent(context, ViewVehicleClient.class);
+                    intent.putExtra("mode", "viewall");
+                } else if (position == 1) {
+                    intent = new Intent(context, SelectDates.class);
+                } else if (position == 2) {
+                    intent = new Intent(context, SelectDates.class);
+                } else if (position == 3) {
+                    intent = new Intent(context, ViewReservations.class);
                 }
-                else if(position == 1){
-                    Intent intent = new Intent();
-                }
-                else if(position == 2){
-
-                }
-                else if(position == 3){
-
-                }
+                context.startActivity(intent);
             }
         });
     }
@@ -55,8 +57,9 @@ public class ClientHomeRecyclerViewAdapter extends RecyclerView.Adapter<ClientHo
         return arrayList.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder{
+    class ViewHolder extends RecyclerView.ViewHolder {
         TextView textView;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.tvClientListItem);

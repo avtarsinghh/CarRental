@@ -9,28 +9,27 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ViewVehicleDetailEmployee extends AppCompatActivity {
+public class ViewVehicleDetailClient extends AppCompatActivity {
     Intent intent;
     Vehicle vehicle;
     VehicleRepositry vehicleRepositry;
     TextView tvBrand, tvModel, tvType, tvYear, tvLicense, tvColor;
-    Button btnModify, btnDelete;
+    Button btnReserve, btnRentNow;
     ImageView imageView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_vehicle_detail_employee);
+        setContentView(R.layout.activity_view_vehicle_detail_client);
 
-        tvBrand = findViewById(R.id.tvBrandVehicleDetailEmployee);
-        tvColor = findViewById(R.id.tvColorVehicleDetailEmployee);
-        tvModel = findViewById(R.id.tvModelVehicleDetailEmployee);
-        tvYear = findViewById(R.id.tvYearVehicleDetailEmployee);
+        tvBrand = findViewById(R.id.tvBrandVehicleDetailClient);
+        tvColor = findViewById(R.id.tvColorVehicleDetailClient);
+        tvModel = findViewById(R.id.tvModelVehicleDetailClient);
+        tvYear = findViewById(R.id.tvYearVehicleDetailClient);
         tvType = findViewById(R.id.tvTypeVehicleDetailClient);
-        tvLicense = findViewById(R.id.tvLicenseVehicleDetailEmployee);
-        btnDelete = findViewById(R.id.btnDeleteVehicleDetailEmployee);
-        btnModify = findViewById(R.id.btnModifyVehicleDetailEmployee);
-        imageView = findViewById(R.id.imageViewVehicleDetailEmployee);
+        tvLicense = findViewById(R.id.tvLicenseVehicleDetailClient);
+        btnRentNow = findViewById(R.id.btnRentNowVehicleDetailClient);
+        btnReserve = findViewById(R.id.btnReserveVehicleDetailClient);
+        imageView = findViewById(R.id.imageViewVehicleDetailClient);
 
         vehicleRepositry = VehicleRepositry.getInstance();
         intent = getIntent();
@@ -46,22 +45,23 @@ public class ViewVehicleDetailEmployee extends AppCompatActivity {
             setImage(vehicle.brand);
         }
 
-        btnModify.setOnClickListener(new View.OnClickListener() {
+        btnReserve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ViewVehicleDetailEmployee.this, ModifyVehicle.class);
+                Intent intent = new Intent(ViewVehicleDetailClient.this, SelectDates.class);
                 intent.putExtra("license", license);
+                intent.putExtra("mode", "reserve");
                 startActivity(intent);
             }
         });
 
-        btnDelete.setOnClickListener(new View.OnClickListener() {
+        btnRentNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                vehicleRepositry.removeVehicle(license);
-                Intent intent = new Intent(ViewVehicleDetailEmployee.this, ViewVehiclesEmployee.class);
+                Intent intent = new Intent(ViewVehicleDetailClient.this, SelectDates.class);
+                intent.putExtra("mode", "rent");
+                intent.putExtra("license", license);
                 startActivity(intent);
-                ViewVehicleDetailEmployee.this.finish();
             }
         });
     }

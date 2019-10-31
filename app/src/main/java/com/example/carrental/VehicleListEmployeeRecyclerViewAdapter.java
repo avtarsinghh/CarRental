@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -32,7 +31,7 @@ public class VehicleListEmployeeRecyclerViewAdapter extends RecyclerView.Adapter
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = layoutInflater.inflate(R.layout.vehicle_list_employee, parent, false);
+        View view = layoutInflater.inflate(R.layout.vehicle_list, parent, false);
         return new ViewHolder(view);
     }
 
@@ -113,8 +112,8 @@ LinearLayout linearLayout;
             super(itemView);
             tvBrand = itemView.findViewById(R.id.tvBrandVehicleList);
             tvModel = itemView.findViewById(R.id.tvModelVehicleList);
-            imageView = itemView.findViewById(R.id.ivVehicleListEmployee);
-            linearLayout = itemView.findViewById(R.id.llVListEmployee);
+            imageView = itemView.findViewById(R.id.ivVehicleList);
+            linearLayout = itemView.findViewById(R.id.llVehicleList);
         }
     }
 }

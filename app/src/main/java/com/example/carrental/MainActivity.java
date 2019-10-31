@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         user1.lastName = "Kaur";
         user1.role = "Client";
         user1.password = "CarRental";
-        user1.userName = "amardeepkaur";
+        user1.userName = "amar";
         userRepository.addUser(user1);
     }
 

@@ -6,22 +6,39 @@
     android:layout_height="match_parent"
     tools:context=".ReserveVehicle">
 
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Select Date's"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayoutSelectDates"
+        android:gravity="center"
         android:layout_width="411dp"
         android:layout_height="190dp"
-        android:layout_marginTop="100sp"
         android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.206">
 
         <EditText
-            android:id="@+id/edtStartDateActivityReserveVehicle"
+            android:id="@+id/edtStartDateSelectDate"
             android:layout_width="273dp"
             android:layout_height="64dp"
             android:ems="10"
             android:hint="Select Start Date"
-            android:inputType="textPersonName"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,31 +48,30 @@
             />
 
         <EditText
-            android:id="@+id/edtEndDateActivityReserveVehicle"
+            android:id="@+id/edtEndDateSelectDate"
             android:layout_width="275dp"
             android:layout_height="66dp"
             android:ems="10"
             android:hint="End Date"
-            android:inputType="textPersonName"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtStartDateActivityReserveVehicle"
+            app:layout_constraintTop_toBottomOf="@+id/edtStartDateSelectDate"
             app:layout_constraintVertical_bias="0.095" />
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/btnReserveActivityReserveVehicle"
-        android:layout_width="398dp"
-        android:layout_height="75dp"
-        android:text="Reserve Vehicle"
-        android:textSize="20dp"
+        android:id="@+id/btnGoSelectDates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go"
+        android:textSize="25dp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.398"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutSelectDates"
+        app:layout_constraintVertical_bias="0.163" />
 </androidx.constraintlayout.widget.ConstraintLayout>
