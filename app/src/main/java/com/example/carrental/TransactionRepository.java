@@ -23,4 +23,7 @@ public class TransactionRepository {
     public void setTransaction(Transaction transaction){
         instance.transactionMap.put((transaction.user.userName+transaction.vehicle.licencePlate).toLowerCase(), transaction);
     }
+    public void removeTransaction(String id){
+        instance.transactionMap.remove(id.toLowerCase());
+    }
 }
