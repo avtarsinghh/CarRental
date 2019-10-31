@@ -17,7 +17,7 @@ public class VehicleRepositry {
     }
 
     public void addVehicle(Vehicle vehicle){
-        vehicles.put(vehicle.licencePlate, vehicle);
+        vehicles.put(vehicle.licencePlate.toLowerCase(), vehicle);
     }
 
     public Map<String, Vehicle> getVehicles(){

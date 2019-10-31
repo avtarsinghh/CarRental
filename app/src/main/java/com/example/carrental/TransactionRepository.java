@@ -21,6 +21,6 @@ public class TransactionRepository {
     }
 
     public void setTransaction(Transaction transaction){
-        transactionMap.put((transaction.user.userName+transaction.vehicle.licencePlate).toLowerCase(), transaction);
+        instance.transactionMap.put((transaction.user.userName+transaction.vehicle.licencePlate).toLowerCase(), transaction);
     }
 }

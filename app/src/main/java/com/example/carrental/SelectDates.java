@@ -119,6 +119,7 @@ public class SelectDates extends AppCompatActivity {
 
                 String date = day + "/" + month + "/" + year;
                 edtStartDate.setText(date);
+                startDate = date;
             }
         };
 

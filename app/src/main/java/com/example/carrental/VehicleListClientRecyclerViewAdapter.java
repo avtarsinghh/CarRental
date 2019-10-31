@@ -22,9 +22,9 @@ public class VehicleListClientRecyclerViewAdapter extends RecyclerView.Adapter<V
     Context context;
     Map<String, Vehicle> vehicleMap;
     ArrayList<String> licenceNumbers;
-    String mode, startDate, endDate;
+    String mode, startDate, endDate, license;
     String user;
-    public VehicleListClientRecyclerViewAdapter(Context context, Map<String, Vehicle> vehicleMap, String mode, String user, String startDate, String endDate){
+    public VehicleListClientRecyclerViewAdapter(Context context, Map<String, Vehicle> vehicleMap, String mode, String user, String startDate, String endDate, String license){
         this.context = context;
         this.vehicleMap = vehicleMap;
         layoutInflater = LayoutInflater.from(context);
@@ -33,6 +33,7 @@ public class VehicleListClientRecyclerViewAdapter extends RecyclerView.Adapter<V
         this.user = user;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.license = license;
     }
     @NonNull
     @Override

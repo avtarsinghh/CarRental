@@ -17,7 +17,7 @@ public class ViewVehicleClient extends AppCompatActivity {
     VehicleRepositry vehicleRepositry;
     Map<String, Vehicle> vehicleMap;
     ArrayList<String> arrayList;
-    String user, startDate, endDate, mode;
+    String user, startDate, endDate, mode, license;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +28,7 @@ public class ViewVehicleClient extends AppCompatActivity {
         startDate = intent.getStringExtra("startDate");
         endDate = intent.getStringExtra("endDate");
         mode = ""+intent.getStringExtra("mode");
+        license = intent.getStringExtra("license");
 
         if(startDate!=null && endDate!=null && !startDate.equals("") && !endDate.equals("")){
 
@@ -43,7 +44,7 @@ public class ViewVehicleClient extends AppCompatActivity {
             Vehicle vehicle = vehicleMap.get(arrayList.get(i));
         }
 
-        VehicleListClientRecyclerViewAdapter vehicleListEmployeeRecyclerViewAdapter = new VehicleListClientRecyclerViewAdapter(this, vehicleRepositry.getVehicles(), mode, user, startDate, endDate);
+        VehicleListClientRecyclerViewAdapter vehicleListEmployeeRecyclerViewAdapter = new VehicleListClientRecyclerViewAdapter(this, vehicleRepositry.getVehicles(), mode, user, startDate, endDate, license);
         recyclerView.setAdapter(vehicleListEmployeeRecyclerViewAdapter);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
