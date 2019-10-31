@@ -34,10 +34,12 @@ public class Login extends AppCompatActivity {
                     if(user.password.equals(password)){
                         if(user.role.equalsIgnoreCase("Employee")){
                             Intent intent = new Intent(Login.this, EmployeeHome.class);
+                            intent.putExtra("user", uName);
                             startActivity(intent);
                         }
                         else if(user.role.equalsIgnoreCase("Client")){
                             Intent intent = new Intent(Login.this, ClientHome.class);
+                            intent.putExtra("user", uName);
                             startActivity(intent);
                         }
                     }

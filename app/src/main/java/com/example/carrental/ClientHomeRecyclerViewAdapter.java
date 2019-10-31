@@ -16,11 +16,13 @@ public class ClientHomeRecyclerViewAdapter extends RecyclerView.Adapter<ClientHo
     ArrayList<String> arrayList;
     Context context;
     LayoutInflater layoutInflater;
+    String user;
 
-    public ClientHomeRecyclerViewAdapter(Context context, ArrayList<String> arrayList) {
+    public ClientHomeRecyclerViewAdapter(Context context, ArrayList<String> arrayList, String user) {
         this.context = context;
         this.arrayList = arrayList;
         layoutInflater = LayoutInflater.from(context);
+        this.user = user;
     }
 
     @NonNull
@@ -42,11 +44,14 @@ public class ClientHomeRecyclerViewAdapter extends RecyclerView.Adapter<ClientHo
                     intent.putExtra("mode", "viewall");
                 } else if (position == 1) {
                     intent = new Intent(context, SelectDates.class);
+                    intent.putExtra("mode", "viewbwDates");
                 } else if (position == 2) {
                     intent = new Intent(context, SelectDates.class);
+                    intent.putExtra("mode", "rent");
                 } else if (position == 3) {
                     intent = new Intent(context, ViewReservations.class);
                 }
+                intent.putExtra("user", user);
                 context.startActivity(intent);
             }
         });

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ViewVehicleDetailClient extends AppCompatActivity {
     Intent intent;
@@ -16,6 +17,9 @@ public class ViewVehicleDetailClient extends AppCompatActivity {
     TextView tvBrand, tvModel, tvType, tvYear, tvLicense, tvColor;
     Button btnReserve, btnRentNow;
     ImageView imageView;
+    String user, mode, license, startDate, endDate;
+    UserRepository userRepository;
+    TransactionRepository transactionRepository;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +35,16 @@ public class ViewVehicleDetailClient extends AppCompatActivity {
         btnReserve = findViewById(R.id.btnReserveVehicleDetailClient);
         imageView = findViewById(R.id.imageViewVehicleDetailClient);
 
+        userRepository = UserRepository.getInstance();
         vehicleRepositry = VehicleRepositry.getInstance();
+        transactionRepository = TransactionRepository.getInstance();
+
         intent = getIntent();
-        final String license = intent.getStringExtra("license").toLowerCase();
+        user = intent.getStringExtra("user");
+        mode = intent.getStringExtra("mode");
+        startDate = intent.getStringExtra("startDate");
+        endDate = intent.getStringExtra("endDate");
+        license = intent.getStringExtra("license").toLowerCase();
         vehicle = vehicleRepositry.getVehicles().get(license);
         if (vehicle != null) {
             tvBrand.setText(vehicle.brand);
@@ -45,12 +56,18 @@ public class ViewVehicleDetailClient extends AppCompatActivity {
             setImage(vehicle.brand);
         }
 
+        if(startDate != null && endDate != null && license != null){
+            btnReserve.setVisibility(View.GONE);
+            btnRentNow.setText("Done");
+        }
+
         btnReserve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ViewVehicleDetailClient.this, SelectDates.class);
                 intent.putExtra("license", license);
                 intent.putExtra("mode", "reserve");
+                intent.putExtra("user", user);
                 startActivity(intent);
             }
         });
@@ -58,10 +75,32 @@ public class ViewVehicleDetailClient extends AppCompatActivity {
         btnRentNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ViewVehicleDetailClient.this, SelectDates.class);
-                intent.putExtra("mode", "rent");
-                intent.putExtra("license", license);
-                startActivity(intent);
+                if(startDate.equalsIgnoreCase("") && endDate.equalsIgnoreCase("")) {
+                    Intent intent = new Intent(ViewVehicleDetailClient.this, SelectDates.class);
+                    intent.putExtra("mode", "rent");
+                    intent.putExtra("license", license);
+                    intent.putExtra("user", user);
+                    startActivity(intent);
+                }
+                else{
+                    Transaction transaction = new Transaction();
+                    transaction.vehicle = vehicleRepositry.getVehicles().get(license.toLowerCase());
+                    transaction.user = userRepository.getUser(user.toLowerCase());
+                    if(mode.equalsIgnoreCase("rent")){
+                        transaction.rental.startDate = startDate;
+                        transaction.rental.endDate = endDate;
+                    }
+                    else {
+                        transaction.reservation.startDate = startDate;
+                        transaction.reservation.endDate = endDate;
+                    }
+                    transactionRepository.setTransaction(transaction);
+                    Toast.makeText(ViewVehicleDetailClient.this, "Vehicle "+mode+"ed successfully", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(ViewVehicleDetailClient.this, ClientHome.class);
+                    intent.putExtra("user", user);
+                    intent.putExtra("mode", mode);
+                    startActivity(intent);
+                }
             }
         });
     }

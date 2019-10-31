@@ -22,14 +22,17 @@ public class VehicleListClientRecyclerViewAdapter extends RecyclerView.Adapter<V
     Context context;
     Map<String, Vehicle> vehicleMap;
     ArrayList<String> licenceNumbers;
-    String mode;
-
-    public VehicleListClientRecyclerViewAdapter(Context context, Map<String, Vehicle> vehicleMap, String mode){
+    String mode, startDate, endDate;
+    String user;
+    public VehicleListClientRecyclerViewAdapter(Context context, Map<String, Vehicle> vehicleMap, String mode, String user, String startDate, String endDate){
         this.context = context;
         this.vehicleMap = vehicleMap;
         layoutInflater = LayoutInflater.from(context);
         licenceNumbers = new ArrayList<>(vehicleMap.keySet());
         this.mode = mode;
+        this.user = user;
+        this.startDate = startDate;
+        this.endDate = endDate;
     }
     @NonNull
     @Override
@@ -49,6 +52,9 @@ public class VehicleListClientRecyclerViewAdapter extends RecyclerView.Adapter<V
                 Intent intent = new Intent(context, ViewVehicleDetailClient.class);
                 intent.putExtra("mode", mode);
                 intent.putExtra("license", license);
+                intent.putExtra("startDate", startDate);
+                intent.putExtra("endDate", endDate);
+                intent.putExtra("user", user);
                 context.startActivity(intent);
             }
         });

@@ -13,8 +13,6 @@
         <activity android:name=".SelectDates" />
         <activity android:name=".ViewVehicleDetailEmployee" />
         <activity android:name=".ModifyVehicle" />
-        <activity android:name=".RentNow" />
-        <activity android:name=".ReserveNow" />
         <activity android:name=".ModifyCustomer" />
         <activity android:name=".AddVehicle" />
         <activity android:name=".ViewReservations" />
