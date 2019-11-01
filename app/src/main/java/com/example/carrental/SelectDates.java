@@ -149,4 +149,10 @@ public class SelectDates extends AppCompatActivity {
             }
         };
     }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, ClientHome.class);
+        startActivity(intent);
+        this.finish();
+    }
 }

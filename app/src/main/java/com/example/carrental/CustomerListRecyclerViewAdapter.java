@@ -20,6 +20,7 @@ public class CustomerListRecyclerViewAdapter extends RecyclerView.Adapter<Custom
     Map<String, User> users;
     UserRepository userRepository;
     ArrayList<String> uNames;
+    String userName;
 
     public CustomerListRecyclerViewAdapter(Context context, Map<String, User> users){
         this.context = context;
@@ -42,13 +43,11 @@ public class CustomerListRecyclerViewAdapter extends RecyclerView.Adapter<Custom
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String userName = holder.tvUserName.getText().toString().toLowerCase();
+                userName = holder.tvUserName.getText().toString().toLowerCase();
                 userRepository.deleteUser(userName);
-                users = userRepository.getUsers();
-                uNames.remove(userName);
-                notifyItemRemoved(position);
-                notifyItemRangeChanged(position, users.size());
-                notifyDataSetChanged();
+                Intent intent = new Intent(context, ViewCustomers.class);
+                context.startActivity(intent);
+                ((ViewCustomers)context).finish();
             }
         });
 
@@ -76,8 +75,8 @@ public class CustomerListRecyclerViewAdapter extends RecyclerView.Adapter<Custom
             super(itemView);
             tvName = itemView.findViewById(R.id.tvNameCustomerList);
             tvUserName = itemView.findViewById(R.id.tvUserNameCustomerList);
-            btnDelete = itemView.findViewById(R.id.btnViewDetailVehicleList);
-            btnModify = itemView.findViewById(R.id.btnReserveNowVehicleList);
+            btnDelete = itemView.findViewById(R.id.btnDeleteCustomerList);
+            btnModify = itemView.findViewById(R.id.btnModifyCustomerList);
         }
     }
 }

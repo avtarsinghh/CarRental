@@ -52,7 +52,7 @@ public class EmployeeHomeRecyclerViewAdapter extends RecyclerView.Adapter<Employ
                     context.startActivity(intent);
                 }
                 if(position == 4){
-                    Intent intent = new Intent(context, ViewReservations.class);
+                    Intent intent = new Intent(context, ViewReservationsEmployee.class);
                     context.startActivity(intent);
                 }
             }

@@ -103,13 +103,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <Button
-            android:id="@+id/btnViewDetailVehicleList"
+            android:id="@+id/btnDeleteCustomerList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Delete" />
 
         <Button
-            android:id="@+id/btnReserveNowVehicleList"
+            android:id="@+id/btnModifyCustomerList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Modify" />

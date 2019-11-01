@@ -26,7 +26,7 @@ public class ViewVehicleDetailEmployee extends AppCompatActivity {
         tvColor = findViewById(R.id.tvColorVehicleDetailEmployee);
         tvModel = findViewById(R.id.tvModelVehicleDetailEmployee);
         tvYear = findViewById(R.id.tvYearVehicleDetailEmployee);
-        tvType = findViewById(R.id.tvTypeVehicleDetailClient);
+        tvType = findViewById(R.id.tvTypeVehicleDetailEmployee);
         tvLicense = findViewById(R.id.tvLicenseVehicleDetailEmployee);
         btnDelete = findViewById(R.id.btnDeleteVehicleDetailEmployee);
         btnModify = findViewById(R.id.btnModifyVehicleDetailEmployee);

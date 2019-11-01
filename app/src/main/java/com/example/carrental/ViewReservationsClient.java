@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ViewReservations extends AppCompatActivity {
+public class ViewReservationsClient extends AppCompatActivity {
 RecyclerView recyclerView;
 RecyclerView.LayoutManager layoutManager;
 TransactionRepository transactionRepository;
@@ -42,5 +42,12 @@ Intent intent;
                 new ViewReservationsRecyclerViewAdapterClient(this, transactionMap, user);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(viewReservationsRecyclerViewAdapterClient);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, ClientHome.class);
+        startActivity(intent);
+        this.finish();
     }
 }

@@ -1,7 +1,6 @@
 package com.example.carrental;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
@@ -43,7 +42,7 @@ public class ReturnVehicle extends AppCompatActivity {
                     Transaction transaction = transactionRepository.getTransactions().get(key.toLowerCase());
                     transaction.returnDate = date;
                     transactionRepository.setTransaction(transaction);
-                    Intent intent = new Intent(ReturnVehicle.this, ViewReservations.class);
+                    Intent intent = new Intent(ReturnVehicle.this, ViewReservationsClient.class);
                     intent.putExtra("user", user);
                     startActivity(intent);
                 }

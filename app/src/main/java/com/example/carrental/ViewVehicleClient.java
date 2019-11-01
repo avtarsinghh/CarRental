@@ -33,6 +33,10 @@ public class ViewVehicleClient extends AppCompatActivity {
         if(startDate!=null && endDate!=null && !startDate.equals("") && !endDate.equals("")){
 
         }
+        else{
+            startDate = "";
+            startDate = "";
+        }
 
         recyclerView = findViewById(R.id.rvVehicleListClient);
 
@@ -48,5 +52,12 @@ public class ViewVehicleClient extends AppCompatActivity {
         recyclerView.setAdapter(vehicleListEmployeeRecyclerViewAdapter);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, ClientHome.class);
+        startActivity(intent);
+        this.finish();
     }
 }

@@ -2,6 +2,7 @@ package com.example.carrental;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
@@ -132,5 +133,11 @@ public class AddVehicle extends AppCompatActivity {
         types.add("Crossover");
         types.add("Coupe");
         types.add("Convertible");
+    }
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, EmployeeHome.class);
+        startActivity(intent);
+        this.finish();
     }
 }

@@ -136,7 +136,7 @@ public class ViewVehicleDetailClient extends AppCompatActivity {
                     }
                 }
                 if(cont == 0)
-                if (startDate.equalsIgnoreCase("") && endDate.equalsIgnoreCase("")) {
+                if ((startDate == null || endDate == null) || (startDate.equalsIgnoreCase("") || endDate.equalsIgnoreCase(""))) {
                     Intent intent = new Intent(ViewVehicleDetailClient.this, SelectDates.class);
                     intent.putExtra("mode", "rent");
                     intent.putExtra("license", license);

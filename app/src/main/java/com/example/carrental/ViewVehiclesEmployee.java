@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 public class ViewVehiclesEmployee extends AppCompatActivity {
@@ -22,5 +23,12 @@ public class ViewVehiclesEmployee extends AppCompatActivity {
         recyclerView.setAdapter(vehicleListEmployeeRecyclerViewAdapter);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, EmployeeHome.class);
+        startActivity(intent);
+        this.finish();
     }
 }

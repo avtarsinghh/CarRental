@@ -49,7 +49,7 @@ public class ClientHomeRecyclerViewAdapter extends RecyclerView.Adapter<ClientHo
                     intent = new Intent(context, SelectDates.class);
                     intent.putExtra("mode", "rent");
                 } else if (position == 3) {
-                    intent = new Intent(context, ViewReservations.class);
+                    intent = new Intent(context, ViewReservationsClient.class);
                 }
                 intent.putExtra("user", user);
                 context.startActivity(intent);
