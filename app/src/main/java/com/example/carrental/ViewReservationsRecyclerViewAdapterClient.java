@@ -1,6 +1,7 @@
 package com.example.carrental;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 
 public class ViewReservationsRecyclerViewAdapterClient extends RecyclerView.Adapter<ViewReservationsRecyclerViewAdapterClient.ViewHolder> {
@@ -36,7 +36,7 @@ public class ViewReservationsRecyclerViewAdapterClient extends RecyclerView.Adap
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = layoutInflater.inflate(R.layout.reservation_list, parent, false);
+        View view = layoutInflater.inflate(R.layout.reservation_list_client, parent, false);
         return new ViewHolder(view);
     }
 
@@ -67,6 +67,16 @@ public class ViewReservationsRecyclerViewAdapterClient extends RecyclerView.Adap
                 Toast.makeText(context, "Reservation Cancelled successfully", Toast.LENGTH_SHORT).show();
             }
         });
+
+        holder.btnReturn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ReturnVehicle.class);
+                intent.putExtra("user", user);
+                intent.putExtra("key", arrayList.get(position));
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -76,7 +86,7 @@ public class ViewReservationsRecyclerViewAdapterClient extends RecyclerView.Adap
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvBrand, tvModel, tvStartDate, tvEndDate, tvLicense, tvReturn;
-        Button btnCancel;
+        Button btnCancel, btnReturn;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvBrand = itemView.findViewById(R.id.tvBrandReservationListClient);
@@ -86,6 +96,7 @@ public class ViewReservationsRecyclerViewAdapterClient extends RecyclerView.Adap
             tvLicense = itemView.findViewById(R.id.tvLicenseReservationListClient);
             tvReturn = itemView.findViewById(R.id.tvReturnReservationListClient);
             btnCancel = itemView.findViewById(R.id.btnCancelReservationClient);
+            btnReturn = itemView.findViewById(R.id.btnreturnReservationClient);
         }
     }
 }

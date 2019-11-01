@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewVehicleDetailClient"></activity>
+        <activity android:name=".ReturnVehicle"></activity>
+        <activity android:name=".ViewVehicleDetailClient" />
         <activity android:name=".SelectDates" />
         <activity android:name=".ViewVehicleDetailEmployee" />
         <activity android:name=".ModifyVehicle" />
