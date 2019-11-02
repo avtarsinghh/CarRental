@@ -43,11 +43,4 @@ Intent intent;
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(viewReservationsRecyclerViewAdapterClient);
     }
-
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, ClientHome.class);
-        startActivity(intent);
-        this.finish();
-    }
 }

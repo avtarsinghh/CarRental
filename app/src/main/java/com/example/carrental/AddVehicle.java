@@ -134,10 +134,4 @@ public class AddVehicle extends AppCompatActivity {
         types.add("Coupe");
         types.add("Convertible");
     }
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, EmployeeHome.class);
-        startActivity(intent);
-        this.finish();
-    }
 }

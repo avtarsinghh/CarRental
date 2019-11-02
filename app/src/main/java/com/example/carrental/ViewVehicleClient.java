@@ -53,11 +53,4 @@ public class ViewVehicleClient extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
     }
-
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, ClientHome.class);
-        startActivity(intent);
-        this.finish();
-    }
 }

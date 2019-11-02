@@ -35,4 +35,10 @@ public class ClientHome extends AppCompatActivity {
         ClientHomeRecyclerViewAdapter recyclerViewAdapter = new ClientHomeRecyclerViewAdapter(this, arrayList, user);
         recyclerView.setAdapter(recyclerViewAdapter);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
+    }
 }

@@ -24,11 +24,4 @@ public class ViewVehiclesEmployee extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
     }
-
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, EmployeeHome.class);
-        startActivity(intent);
-        this.finish();
-    }
 }

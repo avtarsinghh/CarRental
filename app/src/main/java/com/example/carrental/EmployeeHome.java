@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -32,5 +33,11 @@ public class EmployeeHome extends AppCompatActivity {
         EmployeeHomeRecyclerViewAdapter recyclerViewAdapter = new EmployeeHomeRecyclerViewAdapter(this, arrayList);
         recyclerView.setAdapter(recyclerViewAdapter);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, Login.class);
+        startActivity(intent);
     }
 }

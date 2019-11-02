@@ -57,11 +57,4 @@ public class AddCustomer extends AppCompatActivity {
             }
         });
     }
-
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, EmployeeHome.class);
-        startActivity(intent);
-        this.finish();
-    }
 }

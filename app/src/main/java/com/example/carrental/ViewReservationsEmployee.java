@@ -34,10 +34,4 @@ public class ViewReservationsEmployee extends AppCompatActivity {
         recyclerView.setAdapter(viewReservationsRecyclerViewAdapterEmployee);
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent intent = new Intent(this, EmployeeHome.class);
-        startActivity(intent);
-        this.finish();
-    }
 }
